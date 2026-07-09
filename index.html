@@ -6,7 +6,7 @@
 <title>Dream Team Assessment — COOL Church</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f7f7f5;min-height:100vh;display:flex;align-items:flex-start;justify-content:center;padding:0}
+body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:#f7f7f5;min-height:100vh;display:flex;align-items:flex-start;justify-content:center;padding:0}
 .app{width:100%;max-width:480px;min-height:100vh;background:#fff;position:relative}
 .screen{display:none;padding:2rem 1.5rem 3rem}
 .screen.active{display:block}
@@ -15,58 +15,58 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .welcome-logo-wrap{background:#fff;padding:2rem 1.5rem 1.5rem;text-align:center;border-bottom:1px solid #f0f0ee}
 .welcome-logo{max-width:180px;height:auto}
 .welcome-body{padding:1.75rem 1.5rem 2rem}
-.welcome-tag{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#888;margin-bottom:.75rem}
+.welcome-tag{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#2a6a00;margin-bottom:.75rem}
 .welcome-title{font-size:26px;font-weight:700;color:#111;line-height:1.25;margin-bottom:.75rem}
 .welcome-sub{font-size:15px;color:#555;line-height:1.65;margin-bottom:1.5rem}
 .pills{display:flex;gap:.625rem;flex-wrap:wrap;margin-bottom:1.75rem}
-.pill{display:inline-flex;align-items:center;gap:5px;background:#f2f1fe;color:#4a42b0;font-size:12px;font-weight:500;padding:.35rem .8rem;border-radius:20px}
+.pill{display:inline-flex;align-items:center;gap:5px;background:#f4fce6;color:#2a4a00;font-size:12px;font-weight:500;padding:.35rem .8rem;border-radius:20px}
 .field-label{font-size:12px;font-weight:600;color:#444;letter-spacing:.03em;margin-bottom:.4rem}
 .input{width:100%;padding:.8rem 1rem;border:1.5px solid #e5e5e3;border-radius:10px;font-size:15px;color:#111;background:#fff;margin-bottom:.875rem;outline:none;transition:border .15s}
-.input:focus{border-color:#534AB7}
+.input:focus{border-color:#1a1a1a}
 .err{font-size:12px;color:#c0392b;margin-bottom:.875rem;display:none}
-.start-btn{width:100%;padding:1rem;background:#534AB7;color:#fff;border:none;border-radius:12px;font-size:16px;font-weight:600;cursor:pointer;letter-spacing:.01em}
-.start-btn:hover{background:#4a42b0}
+.start-btn{width:100%;padding:1rem;background:#C8F135;color:#111;border:none;border-radius:12px;font-size:16px;font-weight:600;cursor:pointer;letter-spacing:.01em}
+.start-btn:hover{background:#b3d930}
 .welcome-footer{font-size:11px;color:#aaa;text-align:center;margin-top:1.25rem;line-height:1.6}
 
 /* Question */
 .q-header{padding:1.5rem 1.5rem 0}
 .prog-wrap{background:#eeeef0;border-radius:4px;height:4px;margin-bottom:1.25rem}
-.prog-fill{background:#534AB7;height:4px;border-radius:4px;transition:width .3s}
+.prog-fill{background:#C8F135;height:4px;border-radius:4px;transition:width .3s}
 .q-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem}
-.q-sec{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#534AB7}
+.q-sec{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1a1a1a}
 .q-num{font-size:12px;color:#aaa}
 .q-body{padding:1.25rem 1.5rem 0}
 .q-text{font-size:17px;font-weight:500;color:#111;line-height:1.55;margin-bottom:1.5rem}
 .opts{display:flex;flex-direction:column;gap:9px;padding:0 1.5rem}
 .opt{background:#fff;border:1.5px solid #e8e8e6;border-radius:11px;padding:.875rem 1rem;text-align:left;cursor:pointer;font-size:14px;color:#222;display:flex;align-items:center;gap:10px;transition:all .12s;line-height:1.4}
-.opt:hover{background:#f8f7fe;border-color:#b3aee8}
-.opt.sel{border:2px solid #534AB7;background:#f2f1fe;color:#3a3398}
+.opt:hover{background:#f8f7fe;border-color:#a8d42a}
+.opt.sel{border:2px solid #C8F135;background:#f4fce6;color:#2a4a00}
 .opt-num{font-size:11px;font-weight:600;color:#bbb;min-width:18px;flex-shrink:0}
-.opt.sel .opt-num{color:#534AB7}
+.opt.sel .opt-num{color:#1a1a1a}
 .nav{display:flex;gap:10px;padding:1.5rem 1.5rem 0}
 .btn-back{flex:0 0 auto;padding:.8rem 1.25rem;border-radius:10px;border:1.5px solid #e5e5e3;cursor:pointer;font-size:14px;background:#fff;color:#555}
-.btn-next{flex:1;padding:.8rem;border-radius:10px;border:none;cursor:pointer;font-size:15px;font-weight:600;background:#534AB7;color:#fff;transition:background .15s}
+.btn-next{flex:1;padding:.8rem;border-radius:10px;border:none;cursor:pointer;font-size:15px;font-weight:600;background:#C8F135;color:#111;transition:background .15s}
 .btn-next:disabled{background:#c8c6e8;cursor:not-allowed}
 .btn-back:disabled{opacity:.4;cursor:not-allowed}
 
 /* Results */
 .res-logo-wrap{background:#fff;padding:1.5rem;text-align:center;border-bottom:1px solid #f0f0ee}
 .res-logo{max-width:120px}
-.res-hero{background:linear-gradient(135deg,#534AB7 0%,#7B72D4 100%);padding:2rem 1.5rem;text-align:center}
-.res-eyebrow{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:.5rem}
-.res-name{font-size:24px;font-weight:700;color:#fff;margin-bottom:.6rem}
-.res-desc{font-size:13px;color:rgba(255,255,255,.85);line-height:1.65;max-width:360px;margin:0 auto}
+.res-hero{background:linear-gradient(135deg,#C8F135 0%,#a8d42a 100%);padding:2rem 1.5rem;text-align:center}
+.res-eyebrow{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,0,0,0.5);margin-bottom:.5rem}
+.res-name{font-size:24px;font-weight:700;color:#111;margin-bottom:.6rem}
+.res-desc{font-size:13px;color:rgba(0,0,0,0.7);line-height:1.65;max-width:360px;margin:0 auto}
 .res-body{padding:1.5rem}
 .sec-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#888;margin-bottom:.875rem}
 .gift-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
 .gift-name{font-size:13px;font-weight:500;color:#222;width:115px;flex-shrink:0}
 .gift-track{flex:1;height:7px;background:#eeeef0;border-radius:4px}
-.gift-bar{height:7px;border-radius:4px;background:#534AB7;transition:width .6s ease}
+.gift-bar{height:7px;border-radius:4px;background:#C8F135;transition:width .6s ease}
 .gift-rank{font-size:12px;color:#aaa;min-width:24px;text-align:right}
 .teams-section{margin-top:1.5rem}
 .team-card{background:#fff;border:1.5px solid #ebebea;border-radius:13px;padding:1.1rem 1.25rem;margin-bottom:.875rem}
-.team-card.best{border-left:4px solid #534AB7;border-color:#534AB7}
-.team-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#534AB7;background:#f2f1fe;padding:.25rem .65rem;border-radius:20px;margin-bottom:.6rem}
+.team-card.best{border-left:4px solid #C8F135;border-color:#1a1a1a}
+.team-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#1a1a1a;background:#f4fce6;padding:.25rem .65rem;border-radius:20px;margin-bottom:.6rem}
 .team-badge.b2{color:#2d8a5e;background:#e3f5ed}
 .team-badge.b3{color:#7a5a00;background:#fef3d0}
 .team-head{display:flex;align-items:center;gap:8px;margin-bottom:.3rem}
@@ -75,21 +75,21 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .team-why{font-size:13px;color:#444;line-height:1.55}
 .disc-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:1.5rem}
 .disc-card{background:#f8f8f7;border-radius:10px;padding:.875rem;text-align:center}
-.disc-card.pri{background:#f2f1fe}
-.disc-letter{font-size:24px;font-weight:700;color:#534AB7;line-height:1}
+.disc-card.pri{background:#f4fce6}
+.disc-letter{font-size:24px;font-weight:700;color:#1a1a1a;line-height:1}
 .disc-card:not(.pri) .disc-letter{color:#888}
 .disc-label{font-size:11px;color:#888;margin-top:.25rem}
-.disc-card.pri .disc-label{color:#7B72D4}
+.disc-card.pri .disc-label{color:#1a1a1a}
 .cta-btn{width:100%;padding:.9rem;border:1.5px solid #e5e5e3;border-radius:11px;background:#fff;color:#333;font-size:13px;cursor:pointer;margin-top:.5rem;font-weight:500}
 .cta-btn:hover{background:#f8f7fe}
 .res-footer{text-align:center;padding:1rem 1.5rem 2rem;font-size:11px;color:#bbb;line-height:1.6}
 .gifts-detail-section{margin-top:1.5rem}
 .gift-detail-card{border:1.5px solid #ebebea;border-radius:13px;padding:1.1rem 1.25rem;margin-bottom:.875rem;background:#fff}
-.gift-detail-name{font-size:15px;font-weight:700;color:#534AB7;margin-bottom:.35rem;display:flex;align-items:center;gap:8px}
+.gift-detail-name{font-size:15px;font-weight:700;color:#1a1a1a;margin-bottom:.35rem;display:flex;align-items:center;gap:8px}
 .gift-detail-icon{font-size:18px}
 .gift-detail-desc{font-size:13px;color:#444;line-height:1.65;margin-bottom:.5rem}
 .gift-detail-scripture{font-size:12px;color:#888;font-style:italic;line-height:1.5;border-left:3px solid #e8e6fe;padding-left:.75rem;margin-top:.5rem}
-.gift-detail-howto{font-size:12px;color:#534AB7;font-weight:500;margin-top:.5rem}
+.gift-detail-howto{font-size:12px;color:#1a1a1a;font-weight:500;margin-top:.5rem}
 </style>
 </head>
 <body>
@@ -106,8 +106,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     <div class="welcome-sub">Every person has been uniquely gifted by God for a purpose. This assessment will help you uncover your spiritual gifts, understand your personality, and find the Dream Team where you'll make the greatest Kingdom impact.</div>
     <div class="pills">
       <span class="pill">⏱ ~8 minutes</span>
-      <span class="pill">✅ 30 questions</span>
-      <span class="pill">👥 20 teams</span>
+      <span class="pill">✅ 37 questions</span>
+      <span class="pill">👥 23 teams</span>
     </div>
     <div class="field-label">First name</div>
     <input id="ni" class="input" type="text" placeholder="Your first name" />
@@ -175,34 +175,40 @@ var LOGO_B64 = '/9j/4Q/ERXhpZgAATU0AKgAAAAgABwESAAMAAAABAAEAAAEaAAUAAAABAAAAYgEb
 var Qs=[
   {id:'d1',sec:'How you\'re wired',text:'When a problem comes up, I\'m the first to jump in and take charge.',type:'disc',disc:'D'},
   {id:'d2',sec:'How you\'re wired',text:'I prefer taking action over waiting to have every detail figured out.',type:'disc',disc:'D'},
+  {id:'d3',sec:'How you\'re wired',text:'I\'m comfortable making quick decisions, even under pressure.',type:'disc',disc:'D'},
   {id:'i1',sec:'How you\'re wired',text:'I love talking to new people and instantly making them feel welcome.',type:'disc',disc:'I'},
   {id:'i2',sec:'How you\'re wired',text:'People say I bring energy and excitement into any room.',type:'disc',disc:'I'},
+  {id:'i3',sec:'How you\'re wired',text:'I naturally encourage and cheer people on — it comes easy to me.',type:'disc',disc:'I'},
   {id:'s1',sec:'How you\'re wired',text:'I show up consistently and follow through even when no one is watching.',type:'disc',disc:'S'},
   {id:'s2',sec:'How you\'re wired',text:'I\'d rather support someone else\'s vision than be in the spotlight myself.',type:'disc',disc:'S'},
   {id:'c1',sec:'How you\'re wired',text:'I notice details and errors that others walk right past.',type:'disc',disc:'C'},
   {id:'c2',sec:'How you\'re wired',text:'I feel most confident when I have a clear system or process to follow.',type:'disc',disc:'C'},
-  {id:'g1',sec:'How you serve',text:'I naturally influence others toward a shared goal and cast vision for the future.',type:'gift',gift:'Leadership'},
-  {id:'g2',sec:'How you serve',text:'I love breaking down truth in a way that\'s clear, practical, and easy to understand.',type:'gift',gift:'Teaching'},
-  {id:'g3',sec:'How you serve',text:'I feel most fulfilled when I\'m meeting practical needs — even if nobody sees it.',type:'gift',gift:'Service'},
-  {id:'g4',sec:'How you serve',text:'I\'m drawn to people who are hurting and want to sit with them in it.',type:'gift',gift:'Mercy'},
+  {id:'g1',sec:'How you serve',text:'I naturally influence and mobilize others toward a shared goal.',type:'gift',gift:'Leadership'},
+  {id:'g2',sec:'How you serve',text:'I love breaking down truth in a way that is clear, practical, and easy to understand.',type:'gift',gift:'Teaching'},
+  {id:'g3',sec:'How you serve',text:'I feel most fulfilled when I am meeting practical needs — even if nobody sees it.',type:'gift',gift:'Service'},
+  {id:'g4',sec:'How you serve',text:'I am drawn to people who are hurting and want to sit with them in it.',type:'gift',gift:'Mercy'},
   {id:'g5',sec:'How you serve',text:'Making people feel genuinely at home and cared for comes naturally to me.',type:'gift',gift:'Hospitality'},
   {id:'g6',sec:'How you serve',text:'I love organizing people and systems so that everything runs without chaos.',type:'gift',gift:'Administration'},
   {id:'g7',sec:'How you serve',text:'I look for opportunities to share my faith and invite people into a relationship with Jesus.',type:'gift',gift:'Evangelism'},
   {id:'g8',sec:'How you serve',text:'I can often sense when something is spiritually off, even before it becomes obvious.',type:'gift',gift:'Discernment'},
   {id:'g9',sec:'How you serve',text:'People naturally come to me when they need encouragement to keep going.',type:'gift',gift:'Exhortation'},
   {id:'g10',sec:'How you serve',text:'Interceding for people and situations is something I feel genuinely called to do.',type:'gift',gift:'Intercession'},
-  {id:'g11',sec:'How you serve',text:'I\'m drawn to expressing faith through creativity — art, storytelling, music, or media — even if I haven\'t had the chance yet.',type:'gift',gift:'Creative Arts'},
-  {id:'g12',sec:'How you serve',text:'The idea of using technical skills like sound, video, or lighting to serve the mission genuinely excites me — even if I\'m still learning.',type:'gift',gift:'Technical'},
-  {id:'g13',sec:'How you serve',text:'I believe kids\' spiritual growth is just as important as adults\', and I want to invest in it.',type:'gift',gift:'Children'},
-  {id:'g14',sec:'How you serve',text:'I feel a specific pull toward people who are often overlooked or need extra care and patience.',type:'gift',gift:'Special Needs'},
-  {id:'g15',sec:'How you serve',text:'I have a natural ability to connect with young people and earn their trust without trying too hard.',type:'gift',gift:'Youth'},
-  {id:'g16',sec:'How you serve',text:'I have a heart for making sure people aren\'t excluded because of language or cultural differences.',type:'gift',gift:'Languages'},
-  {id:'v1',sec:'What draws you',text:'Which environment energizes you most?',type:'val',opts:['Behind the scenes — setup and support roles','Front line — greeting and engaging people directly','Creative or media — storytelling, music, or visuals','Structured — data, logistics, and systems']},
-  {id:'v2',sec:'What draws you',text:'If you had a free Sunday to serve anywhere, you\'d choose:',type:'val',opts:['Kids or youth ministry','Security, parking, or logistics','Worship, production, or creative content','Hospitality, hosting, or prayer']},
+  {id:'g11',sec:'How you serve',text:'I am drawn to expressing faith through creativity — art, storytelling, music, or media — even if I have not had the chance yet.',type:'gift',gift:'Creative Arts'},
+  {id:'g12',sec:'How you serve',text:'The idea of using technical skills like sound, video, or lighting to serve the mission genuinely excites me — even if I am still learning.',type:'gift',gift:'Technical'},
+  {id:'g13',sec:'How you serve',text:'I believe kids spiritual growth is just as important as adults, and I want to invest in it.',type:'gift',gift:'Children'},
+  {id:'g14',sec:'How you serve',text:'I feel a specific pull toward children or families with unique needs — I want to empower and include them.',type:'gift',gift:'Special Needs'},
+  {id:'g15',sec:'How you serve',text:'I have a natural ability to connect with teenagers and earn their trust without trying too hard.',type:'gift',gift:'Youth'},
+  {id:'g16',sec:'How you serve',text:'I have a heart for making sure people are not excluded because of language or cultural differences.',type:'gift',gift:'Languages'},
+  {id:'g17',sec:'How you serve',text:'I am drawn to the idea of using movement and dance as a form of worship and creative expression — even if I have never done it in a ministry context before.',type:'gift',gift:'Dance'},
+  {id:'g18',sec:'How you serve',text:'I feel called to love and serve people outside the church walls — in the community and beyond.',type:'gift',gift:'Outreach'},
+  {id:'g19',sec:'How you serve',text:'I have a heart for people who experience church online — I want them to feel just as connected and cared for as those in the room.',type:'gift',gift:'Virtual'},
+  {id:'v1',sec:'What draws you',text:'Which environment energizes you most?',type:'val',opts:['Behind the scenes — setup, logistics, and support','Front line — greeting, engaging, and welcoming people','Creative or media — storytelling, music, visuals, or dance','Structured — data, systems, and detail-oriented work']},
+  {id:'v2',sec:'What draws you',text:'If you had a free Sunday to serve, what would feel most natural?',type:'val',opts:['Welcoming and guiding people through their Sunday experience','Keeping people safe and making sure everything runs smoothly','Creating something — music, content, visuals, or movement','Connecting with people one on one and making them feel loved']},
   {id:'v3',sec:'What draws you',text:'What motivates you most in ministry?',type:'val',opts:['Seeing people take their next steps with Jesus','Making sure everything runs so others can focus','Creating moments that draw people closer to God','Loving and caring for people in practical ways']},
-  {id:'v4',sec:'What draws you',text:'When a new person walks in, your first instinct is to:',type:'val',opts:['Greet them and make them feel genuinely seen','Make sure the space looks clean and welcoming','Pray for them and believe God for something big','Get their info so they\'re connected and followed up with']},
-  {id:'v5',sec:'What draws you',text:'Which of these feels most like a calling?',type:'val',opts:['Teaching or communicating truth to a group','Protecting people and keeping the environment safe','Building community through conversation and hospitality','Tracking and organizing information to help the church grow']},
-  {id:'v6',sec:'What draws you',text:'When the church is at its best, what\'s happening?',type:'val',opts:['People are being saved and taking their next steps','The experience feels seamless and everyone feels welcome','Worship feels alive and you can feel God\'s presence in the room','Every team member is cared for, equipped, and valued']}
+  {id:'v4',sec:'What draws you',text:'When a new person walks in, your first instinct is to:',type:'val',opts:['Greet them and make them feel genuinely seen','Make sure the space looks clean and set up well','Pray for them and believe God for something big','Get their info so they are connected and followed up with']},
+  {id:'v5',sec:'What draws you',text:'Which of these feels most like a calling to you?',type:'val',opts:['Teaching or communicating truth to a group','Protecting people and keeping the environment safe','Building community through conversation and hospitality','Tracking and organizing information to help the church grow']},
+  {id:'v6',sec:'What draws you',text:'When the church is at its best, what is happening?',type:'val',opts:['People are being saved and taking their next steps','The experience feels seamless and everyone feels welcome','Worship feels alive and you can feel God is presence in the room','Every team member is cared for, equipped, and valued']},
+  {id:'v7',sec:'What draws you',text:'Which of these pulls at your heart the most?',type:'val',opts:['Serving people who are struggling outside the church — in the neighborhood and community','Reaching people who cannot be here in person through online platforms','Telling the story of what God is doing here through content and media','Showing up for individuals in personal, meaningful ways']}
 ];
 
 var DO=[  'Never like me','Sometimes like me','Often like me','Always like me'];
@@ -216,37 +222,39 @@ var PROFILES={
 };
 
 var TEAMS={
-  BUDDIES:{name:'Buddies',icon:'♥',desc:'Serving kids with special needs',gifts:['Special Needs','Mercy','Service'],disc:['S','I'],why:'Your compassion and patience make you exactly who these kids and families need on a Sunday morning.'},
-  COOL_BEANS:{name:'Cool Beans',icon:'☕',desc:'Coffee truck and hospitality',gifts:['Hospitality','Giving','Exhortation'],disc:['I','S'],why:'Your warmth and love for people turns a simple cup of coffee into a real moment of community.'},
-  CULTURE:{name:'Culture',icon:'✦',desc:'Next steps and first-time guests',gifts:['Evangelism','Exhortation','Mercy'],disc:['I','D'],why:'You\'re passionate about people\'s spiritual journey and love helping them figure out what\'s next.'},
-  DATA:{name:'Data',icon:'◈',desc:'Data team oversight',gifts:['Administration','Wisdom','Discernment'],disc:['C','D'],why:'Your analytical mind and attention to detail help the church make smarter, more intentional decisions.'},
-  EXPERIENCE:{name:'Experience',icon:'✧',desc:'Decor, environment and welcome',gifts:['Hospitality','Creative Arts','Service'],disc:['I','S'],why:'You care deeply about first impressions and want every person to feel God\'s presence the moment they walk in.'},
-  HEALTH:{name:'Health',icon:'✚',desc:'First responders and healthcare',gifts:['Mercy','Faith','Service'],disc:['S','C'],why:'You\'re steady under pressure and called to protect and care for people when it matters most.'},
-  HOME:{name:'Home',icon:'⌂',desc:'Church setup and behind-the-scenes',gifts:['Service','Administration','Giving'],disc:['S','C'],why:'Your faithfulness and servant heart make everything else possible — the Dream Team runs because of people like you.'},
-  FAM:{name:'Fam',icon:'❋',desc:'Dream Team care and support',gifts:['Service','Mercy','Giving'],disc:['S','I'],why:'You love your people and find deep joy in making sure every team member feels seen, resourced, and valued.'},
-  HOST:{name:'Host',icon:'◎',desc:'Ushers and in-room experience',gifts:['Hospitality','Service','Exhortation'],disc:['I','S'],why:'You make people feel seen and welcomed the moment they find their seat — that\'s a gift not everyone has.'},
-  KIDS:{name:'Kids',icon:'★',desc:'Kids ministry',gifts:['Children','Teaching','Mercy'],disc:['S','I'],why:'You have a gift for making truth accessible and fun for kids, and they feel genuinely loved when you\'re around.'},
-  MUSICIANS:{name:'Musicians',icon:'♪',desc:'Live music and worship band',gifts:['Creative Arts','Faith','Exhortation'],disc:['I','S'],why:'You use musical gifting to usher people into the presence of God — that\'s one of the most powerful things a person can do.'},
-  PARKING:{name:'Parking',icon:'◉',desc:'Parking and first impressions',gifts:['Hospitality','Service','Evangelism'],disc:['I','S'],why:'You\'re often the very first face someone sees on a Sunday — your energy and warmth set the tone for their whole experience.'},
-  PRAYER:{name:'Prayer',icon:'✿',desc:'Intercession and prayer ministry',gifts:['Intercession','Faith','Mercy'],disc:['S','C'],why:'You carry a genuine prayer burden and believe God moves when His people show up and intercede.'},
-  PRODUCTION:{name:'Production',icon:'▶',desc:'Sound, lighting and video',gifts:['Technical','Creative Arts','Administration'],disc:['C','S'],why:'Your technical skill and precision makes sure the message is seen and heard with excellence every single week.'},
-  SECURITY:{name:'Security',icon:'◆',desc:'Campus safety',gifts:['Service','Discernment','Faith'],disc:['D','S'],why:'You\'re calm, alert, and called to protect — so that everyone else can encounter God without distraction or worry.'},
-  SPANISH:{name:'Spanish Translation',icon:'◐',desc:'Sermon translation',gifts:['Languages','Teaching','Service'],disc:['S','C'],why:'You bridge the language gap so that no one in the room is left out of what God is saying.'},
-  STORYTELLERS:{name:'Storytellers',icon:'◈',desc:'Social media and content',gifts:['Creative Arts','Evangelism','Exhortation'],disc:['I','C'],why:'You use content and storytelling to extend the church\'s reach far beyond Sunday morning — that\'s kingdom work.'},
-  WORSHIP:{name:'Worship',icon:'♬',desc:'Worship leading and vocals',gifts:['Creative Arts','Faith','Exhortation'],disc:['I','D'],why:'You lead people into God\'s presence with your voice and a genuine heart — people follow because they can feel it\'s real.'},
-  YOUTH:{name:'Youth',icon:'◑',desc:'Youth ministry',gifts:['Youth','Exhortation','Evangelism'],disc:['I','S'],why:'Teenagers trust you — you meet them where they are, speak their language, and point them toward Jesus.'},
-  COMMUNICATORS:{name:'Communicators',icon:'►',desc:'Announcements and stage communication',gifts:['Teaching','Exhortation','Evangelism'],disc:['I','D'],why:'You\'re clear, confident, and compelling when you communicate — people actually pay attention when you\'re speaking.'}
+  BUDDIES:{name:'Buddies',icon:'♥',desc:'Empowering children ages 3-8 with unique needs through worship, Biblical teaching, and personal interaction.',gifts:['Special Needs','Mercy','Children'],disc:['S','I'],why:'You have a rare compassion and patience for children with unique needs — exactly what these families need on a Sunday morning.'},
+  COOL_BEANS:{name:'Cool Beans',icon:'☕',desc:'Creating a warm, welcoming first impression through great coffee, hospitality, and heart.',gifts:['Hospitality','Service','Exhortation'],disc:['I','S'],why:'Your warmth and servant spirit turns a cup of coffee into a genuine moment of community and connection.'},
+  CULTURE:{name:'Culture',icon:'✦',desc:'Supporting next steps, salvation decisions, baptisms, church connection, and the Culture Class Fast Track.',gifts:['Evangelism','Exhortation','Mercy'],disc:['I','D'],why:'You are passionate about people taking their next steps with Jesus and love walking alongside them through it.'},
+  DATA:{name:'Data',icon:'◈',desc:'Supporting all Dream Teams through data entry, Kids check-in, event registration, and detail-oriented administration.',gifts:['Administration','Service','Wisdom'],disc:['C','S'],why:'Your precision and attention to detail help the church make smarter decisions and run with excellence.'},
+  EXPERIENCE:{name:'Experience',icon:'✧',desc:'Creating a five-star experience by welcoming guests, bringing the energy, and setting the vibe in every space.',gifts:['Hospitality','Exhortation','Service'],disc:['I','D'],why:'You bring the energy and warmth that makes every person feel seen and excited to be at COOL Church.'},
+  HEALTH:{name:'Health',icon:'✚',desc:'Medical team on standby for any health emergencies or accidents during services and events.',gifts:['Mercy','Faith','Service'],disc:['S','C'],why:'You are steady under pressure and called to protect and care for people when it matters most.'},
+  HOME:{name:'Home',icon:'⌂',desc:'Building brand presence, creating spaces, and ensuring the culture of COOL Church is seen, felt, and known.',gifts:['Creative Arts','Administration','Service'],disc:['C','S'],why:'Your eye for detail and creativity helps every person experience the heart of COOL Church the moment they walk in.'},
+  FAM:{name:'Fam',icon:'❋',desc:'Caring for the Dream Team through hospitality, birthday cards, refreshments, and celebrating milestones.',gifts:['Mercy','Hospitality','Giving'],disc:['S','I'],why:'You love your people deeply and find real joy in making every Dream Team member feel seen, valued, and appreciated.'},
+  HOST:{name:'Host',icon:'◎',desc:'Ensuring everyone finds their place — assisting with seating, facilitating offering, and maintaining a distraction-free environment.',gifts:['Hospitality','Service','Administration'],disc:['I','S'],why:'You make people feel at home the moment they find their seat — that welcoming presence is a gift not everyone has.'},
+  KIDS:{name:'Kids',icon:'★',desc:'Investing in children ages 6 months to 5th grade through worship, Biblical teaching, small groups, and personal interaction.',gifts:['Children','Teaching','Mercy'],disc:['S','I'],why:'You have a gift for making truth fun and accessible for kids, and children feel genuinely loved when you are around.'},
+  MUSICIANS:{name:'Musicians',icon:'♪',desc:'Playing alongside the worship team. Audition and training required.',gifts:['Creative Arts','Faith','Service'],disc:['I','S'],why:'Your musical gift is a powerful tool to usher people into the presence of God every single Sunday.'},
+  MOVES:{name:'Moves',icon:'◆',desc:'Creative leaders using the gift of dance to uplift stage productions, events, and Sunday service specials.',gifts:['Dance','Creative Arts','Exhortation'],disc:['I','D'],why:'You use movement as an act of worship and your creativity on stage draws people deeper into the presence of God.'},
+  PARKING:{name:'Parking',icon:'◉',desc:'Serving as the first impression — welcoming people on and off the property and ensuring a safe parking experience.',gifts:['Hospitality','Evangelism','Service'],disc:['I','S'],why:'You are often the very first face someone sees at COOL Church — your warmth and energy set the tone for their whole experience.'},
+  PRAYER:{name:'Prayer',icon:'✿',desc:'Interceding daily for prayer requests, leading Saturday morning prayer, and supporting salvation calls on Sundays.',gifts:['Intercession','Faith','Mercy'],disc:['S','C'],why:'You carry a genuine prayer burden and truly believe God moves when His people show up and intercede.'},
+  PRODUCTION:{name:'Production',icon:'▶',desc:'Managing lights, cameras, visual elements, and the COOL Church livestream that connects the church worldwide.',gifts:['Technical','Administration','Creative Arts'],disc:['C','S'],why:'Your technical skill and precision ensures the message is seen and heard with excellence — in the room and around the world.'},
+  SECURITY:{name:'Security',icon:'◆',desc:'Creating and sustaining safe environments in the auditorium, lobbies, and kids center for all services and events.',gifts:['Discernment','Service','Faith'],disc:['D','S'],why:'You are calm, alert, and called to protect — so that everyone else can encounter God without distraction or worry.'},
+  SPANISH:{name:'Spanish Translation',icon:'◐',desc:'Translating service and sermon notes for Spanish-speaking congregation members.',gifts:['Languages','Teaching','Service'],disc:['S','C'],why:'You bridge the language gap so that no one in the room is left out of what God is saying.'},
+  STORYTELLERS:{name:'Storytellers',icon:'◈',desc:'Producing content, photographing services, managing social media, leading video shoots, and shaping the COOL Church visual identity.',gifts:['Creative Arts','Evangelism','Technical'],disc:['I','C'],why:'You use content and storytelling to showcase what God is doing at COOL Church far beyond Sunday morning.'},
+  WORSHIP:{name:'Worship',icon:'♬',desc:'Facilitating a powerful worship experience through vocals, instruments, and audio engineering. Evaluation and training required.',gifts:['Creative Arts','Faith','Exhortation'],disc:['I','D'],why:'You lead people into the presence of God with your voice and a genuine heart — people follow because they can feel it is real.'},
+  YOUTH:{name:'Youth',icon:'💥',desc:'Investing in middle and high schoolers through Biblical teaching, small groups, life lessons, and personal interaction.',gifts:['Youth','Exhortation','Evangelism'],disc:['I','S'],why:'Teenagers trust you — you meet them where they are, speak their language, and point them toward Jesus.'},
+  COMMUNICATORS:{name:'Communicators',icon:'►',desc:'Communicating announcements to the congregation each Sunday. Must be dynamic and able to draw people in.',gifts:['Exhortation','Teaching','Evangelism'],disc:['I','D'],why:'You are clear, confident, and magnetic when you speak — people actually stop and pay attention when you are up there.'},
+  VIRTUAL:{name:'Virtual Experience',icon:'🌐',desc:'Hosting online chats, praying for the virtual family, and creating an engaging online campus experience during services and gatherings.',gifts:['Virtual','Hospitality','Exhortation'],disc:['I','S'],why:'You have a heart for people who experience COOL Church online and make sure they feel just as connected as those in the room.'},
+  CARES:{name:'Cares',icon:'🤝',desc:'Organizing outreach and volunteering opportunities outside the church — showing love to the community and the world.',gifts:['Outreach','Mercy','Evangelism'],disc:['S','I'],why:'You feel the call to serve beyond the church walls and carry a genuine burden for people in the community who need to experience God s love.'}
 };
 
 var VAL_BONUSES=[
-  [{HOME:3,FAM:3,PRODUCTION:2,HEALTH:2},{CULTURE:3,HOST:3,COOL_BEANS:3,EXPERIENCE:3},{STORYTELLERS:3,MUSICIANS:3,WORSHIP:3,COMMUNICATORS:2},{DATA:3,HOME:2,PRODUCTION:2}],
-  [{KIDS:3,YOUTH:3,BUDDIES:2},{SECURITY:3,PARKING:3,HOME:2},{WORSHIP:3,PRODUCTION:3,STORYTELLERS:3,MUSICIANS:2},{COOL_BEANS:3,HOST:3,PRAYER:3}],
-  [{CULTURE:3,COMMUNICATORS:2,SPANISH:2},{HOME:3,FAM:3,DATA:2},{WORSHIP:3,PRODUCTION:3,MUSICIANS:2,STORYTELLERS:2},{BUDDIES:3,HEALTH:3,COOL_BEANS:2}],
-  [{EXPERIENCE:3,HOST:3,PARKING:3},{HOME:3,EXPERIENCE:2,FAM:2},{PRAYER:3,HEALTH:2},{DATA:3,CULTURE:3}],
-  [{CULTURE:3,COMMUNICATORS:3},{HOME:3,FAM:3,DATA:2},{WORSHIP:3,MUSICIANS:3,PRODUCTION:3},{BUDDIES:3,HEALTH:3}],
-  [{COMMUNICATORS:3,KIDS:2,YOUTH:2},{SECURITY:3,HEALTH:3},{COOL_BEANS:3,CULTURE:2,HOST:2},{DATA:3,HOME:2}],
-  [{CULTURE:3,COMMUNICATORS:2,SPANISH:2},{EXPERIENCE:3,HOST:3,COOL_BEANS:2},{WORSHIP:3,MUSICIANS:3,PRODUCTION:3},{HOME:3,FAM:3}],
-  [{HOST:3,PARKING:2,COMMUNICATORS:2},{HOME:3,FAM:3,HEALTH:2},{CULTURE:3,EXPERIENCE:2,DATA:2},{BUDDIES:3,PRAYER:3,SPANISH:2}]
+  [{HOME:3,FAM:3,PRODUCTION:2,DATA:2},{EXPERIENCE:3,HOST:3,COOL_BEANS:3,PARKING:2},{STORYTELLERS:3,MUSICIANS:3,WORSHIP:3,MOVES:3},{DATA:3,HOME:2,PRODUCTION:2}],
+  [{KIDS:3,YOUTH:3,BUDDIES:3},{SECURITY:3,PARKING:3,HOME:2},{WORSHIP:3,PRODUCTION:3,STORYTELLERS:3,MOVES:3},{COOL_BEANS:3,HOST:3,PRAYER:3,VIRTUAL:3}],
+  [{CULTURE:3,COMMUNICATORS:3,SPANISH:2},{HOME:3,FAM:3,DATA:2},{WORSHIP:3,PRODUCTION:3,MUSICIANS:2,MOVES:2},{BUDDIES:3,HEALTH:3,CARES:3}],
+  [{EXPERIENCE:3,HOST:3,PARKING:3,COOL_BEANS:2},{HOME:3,EXPERIENCE:2,DATA:2},{PRAYER:3,HEALTH:2},{DATA:3,CULTURE:3}],
+  [{COMMUNICATORS:3,KIDS:2,YOUTH:2},{SECURITY:3,HEALTH:3},{COOL_BEANS:3,CULTURE:2,HOST:2,VIRTUAL:2},{DATA:3,HOME:2}],
+  [{CULTURE:3,COMMUNICATORS:2,SPANISH:2,CARES:2},{EXPERIENCE:3,HOST:3,COOL_BEANS:2,PARKING:2},{WORSHIP:3,MUSICIANS:3,PRODUCTION:3,MOVES:3},{HOME:3,FAM:3,VIRTUAL:2}],
+  [{CARES:4,CULTURE:2,PRAYER:2},{VIRTUAL:4,STORYTELLERS:2,PRODUCTION:2},{STORYTELLERS:4,HOME:2,MOVES:2},{PRAYER:4,CULTURE:2,CARES:2,VIRTUAL:2}]
 ];
 
 var cur=0,ans={},userName='',userEmail='';
@@ -398,25 +406,28 @@ function showResults(){
 }
 
 var GIFT_DEFS={
-  "Leadership":{icon:"⚡",desc:"You have a God-given ability to influence, guide, and mobilize people toward a vision. Leaders don't just manage — they inspire. You set direction, make decisions, and help others discover their potential.",scripture:"Romans 12:8 — If God has given you leadership ability, take the responsibility seriously.",howto:"Look for roles where you can cast vision and lead a team."},
-  "Teaching":{icon:"📖",desc:"You have a supernatural ability to understand God's Word and communicate it in ways that are clear, practical, and life-changing. People learn and grow when you explain truth.",scripture:"Ephesians 4:11-12 — Christ gave the teachers to equip his people for works of service.",howto:"Look for roles where you can communicate, explain, or disciple others."},
-  "Service":{icon:"🙌",desc:"You have a gift for identifying practical needs and meeting them with joy — often behind the scenes. You don't need recognition. You simply love serving, and you do it with excellence.",scripture:"Romans 12:7 — If your gift is serving others, serve them well.",howto:"Look for roles that involve setup, logistics, and hands-on support."},
-  "Mercy":{icon:"💛",desc:"You feel the pain of others deeply and are compelled to bring comfort and compassion. You create safe spaces where people feel seen, heard, and genuinely loved without judgment.",scripture:"Romans 12:8 — If you have a gift for showing kindness to others, do it gladly.",howto:"Look for roles that involve caring for people in vulnerable moments."},
-  "Hospitality":{icon:"🏡",desc:"You have a supernatural ability to make people feel genuinely welcomed and at home — whether in a building, a conversation, or a cup of coffee. You help people feel like they belong before they even know it.",scripture:"Romans 12:13 — Always be eager to practice hospitality.",howto:"Look for roles centered on welcoming, hosting, and creating warm environments."},
-  "Giving":{icon:"🎁",desc:"You experience real joy in generously giving your time, resources, and finances to advance God's Kingdom. You see giving not as a duty but as a privilege — and you do it with a cheerful heart.",scripture:"2 Corinthians 9:7 — God loves a person who gives cheerfully.",howto:"Look for roles where you can resource and support the mission."},
-  "Administration":{icon:"📋",desc:"You have a God-given ability to organize people, processes, and details so that the mission moves forward efficiently. You bring order where there is chaos and help teams function at their best.",scripture:"1 Corinthians 14:40 — Be sure that everything is done properly and in order.",howto:"Look for roles that involve planning, organizing, or managing systems."},
-  "Evangelism":{icon:"🌍",desc:"You have a burning passion for people who don't yet know Jesus. You find it natural to start spiritual conversations, share your testimony, and invite people into a relationship with God.",scripture:"Ephesians 4:11 — Christ gave the evangelists to equip his people for works of service.",howto:"Look for roles that put you in front of new people and first-time guests."},
+  "Leadership":{icon:"⚡",desc:"You have a God-given ability to influence, guide, and mobilize people toward a vision. Leaders don't just manage — they inspire. You set direction, make decisions, and help others discover their potential.",scripture:"Romans 12:8 — If God has given you leadership ability, take the responsibility seriously.",howto:"Look for roles where you can cast vision and lead a team.",everyday:"At work, step up to lead projects and speak up in meetings. At home, set the tone for your household through intentional decisions and loving authority. In everyday life, be the person who organizes and rallies people around a common goal."},
+  "Teaching":{icon:"📖",desc:"You have a supernatural ability to understand God's Word and communicate it in ways that are clear, practical, and life-changing. People learn and grow when you explain truth.",scripture:"Ephesians 4:11-12 — Christ gave the teachers to equip his people for works of service.",howto:"Look for roles where you can communicate, explain, or disciple others.",everyday:"At work, mentor colleagues, lead training sessions, or explain complex ideas simply. At home, lead family devotionals or help your kids understand faith. In everyday life, look for moments to share what you know with people who are searching."},
+  "Service":{icon:"🙌",desc:"You have a gift for identifying practical needs and meeting them with joy — often behind the scenes. You don't need recognition. You simply love serving, and you do it with excellence.",scripture:"Romans 12:7 — If your gift is serving others, serve them well.",howto:"Look for roles that involve setup, logistics, and hands-on support.",everyday:"At work, be the person who picks up the slack without being asked. At home, serve your family through acts of care and consistency. In everyday life, keep your eyes open for practical needs around you and meet them quietly."},
+  "Mercy":{icon:"💛",desc:"You feel the pain of others deeply and are compelled to bring comfort and compassion. You create safe spaces where people feel seen, heard, and genuinely loved without judgment.",scripture:"Romans 12:8 — If you have a gift for showing kindness to others, do it gladly.",howto:"Look for roles that involve caring for people in vulnerable moments.",everyday:"At work, check in on coworkers who seem off and create a culture of care. At home, be quick to listen and slow to judge when family members are struggling. In everyday life, sit with people in their pain — your presence is a gift."},
+  "Hospitality":{icon:"🏡",desc:"You have a supernatural ability to make people feel genuinely welcomed and at home — whether in a building, a conversation, or a cup of coffee. You help people feel like they belong before they even know it.",scripture:"Romans 12:13 — Always be eager to practice hospitality.",howto:"Look for roles centered on welcoming, hosting, and creating warm environments.",everyday:"At work, welcome new team members and make the office feel warm. At home, open your space to others — host dinners, gatherings, and people who need community. In everyday life, introduce yourself first and make others feel like they matter."},
+  "Giving":{icon:"🎁",desc:"You experience real joy in generously giving your time, resources, and finances to advance God's Kingdom. You see giving not as a duty but as a privilege — and you do it with a cheerful heart.",scripture:"2 Corinthians 9:7 — God loves a person who gives cheerfully.",howto:"Look for roles where you can resource and support the mission.",everyday:"At work, be generous with your time, knowledge, and recognition — lift others up freely. At home, model generosity for your family through tithing, giving, and helping others. In everyday life, look for opportunities to give unexpectedly — a meal, a resource, your time — and do it with joy."},
+  "Administration":{icon:"📋",desc:"You have a God-given ability to organize people, processes, and details so that the mission moves forward efficiently. You bring order where there is chaos and help teams function at their best.",scripture:"1 Corinthians 14:40 — Be sure that everything is done properly and in order.",howto:"Look for roles that involve planning, organizing, or managing systems.",everyday:"At work, be the person who creates systems, tracks details, and keeps projects on schedule. At home, bring order through routines, budgeting, and family planning. In everyday life, use your organizational skills to help others who feel overwhelmed."},
+  "Evangelism":{icon:"🌍",desc:"You have a burning passion for people who don't yet know Jesus. You find it natural to start spiritual conversations, share your testimony, and invite people into a relationship with God.",scripture:"Ephesians 4:11 — Christ gave the evangelists to equip his people for works of service.",howto:"Look for roles that put you in front of new people and first-time guests.",everyday:"At work, be intentional about building real relationships and sharing your story when the moment is right. At home, pray for your neighbors and look for open doors. In everyday life, invite people to church — your personal invitation is more powerful than any ad."},
   "Faith":{icon:"🔥",desc:"You have an extraordinary ability to trust God even when circumstances say otherwise. Your faith lifts the faith of everyone around you, and you believe God for things that seem impossible.",scripture:"1 Corinthians 12:9 — The same Spirit gives great faith to another.",howto:"Look for roles that require boldness, intercession, and believing God for breakthrough."},
-  "Discernment":{icon:"👁",desc:"You have a Spirit-given ability to distinguish truth from error and sense what is spiritually happening beneath the surface. You protect the body of Christ and help people stay grounded in truth.",scripture:"1 John 4:1 — Test the spirits to see whether they are from God.",howto:"Look for roles in prayer, leadership support, and spiritual protection."},
-  "Exhortation":{icon:"💬",desc:"You have a gift for coming alongside people and calling out the best in them. Whether it's a word of encouragement, a challenge, or a practical next step — people walk away from conversations with you feeling stronger.",scripture:"Romans 12:8 — If your gift is to encourage others, be encouraging.",howto:"Look for roles where you interact with and pour into people directly."},
-  "Wisdom":{icon:"🌿",desc:"God gives you the ability to apply biblical truth to real-life situations in ways that bring clarity and direction. People seek you out because your perspective cuts through confusion and points to what actually matters.",scripture:"James 1:5 — If you need wisdom, ask our generous God, and he will give it to you.",howto:"Look for roles in leadership, counseling, and decision-making."},
-  "Intercession":{icon:"🙏",desc:"You feel a deep, sustained call to pray for people, situations, and the church. Prayer isn't a discipline you have to force — it's something you are genuinely drawn to, and you believe God moves when you intercede.",scripture:"1 Timothy 2:1 — Pray for all people. Ask God to help them; intercede on their behalf.",howto:"Look for roles in prayer ministry and spiritual covering for the church."},
-  "Creative Arts":{icon:"🎨",desc:"God has wired you to express His truth and beauty through creative expression — music, design, writing, video, photography, or storytelling. Your creativity is not just talent; it's a spiritual gift that moves people toward God.",scripture:"Exodus 31:3 — I have filled him with the Spirit of God, giving him great wisdom and expertise in all kinds of crafts.",howto:"Look for roles in worship, media, social content, and creative environments."},
-  "Technical":{icon:"🎛",desc:"You have a God-given ability and passion for using technology and technical systems to advance the mission. Whether it's sound, lighting, video, or digital tools — you help the message land with excellence.",scripture:"Exodus 31:3 — I have filled him with the Spirit of God, giving him great wisdom and expertise in all kinds of crafts.",howto:"Look for roles in production, media, and technical support."},
-  "Languages":{icon:"🌐",desc:"You have a heart and gift for crossing cultural and language barriers so that everyone can experience the Gospel. You help the church truly reflect the diversity of God's Kingdom.",scripture:"Acts 2:6 — Everyone came running and they were amazed to hear their own languages being spoken by the believers.",howto:"Look for roles in translation, multicultural outreach, and community bridge-building."},
-  "Children":{icon:"⭐",desc:"God has given you a special love and ability to nurture the spiritual growth of children. You have the patience, creativity, and heart to help kids encounter Jesus at a young age — and those seeds last a lifetime.",scripture:"Matthew 19:14 — Jesus said, Let the children come to me. The Kingdom of Heaven belongs to those who are like these children.",howto:"Look for roles in Kids Ministry and Buddies."},
-  "Special Needs":{icon:"♥",desc:"You have a rare and beautiful gift — a specific calling to love, serve, and advocate for people with disabilities and special needs. You see their dignity, their value, and their place in the body of Christ.",scripture:"1 Corinthians 12:22 — Some parts of the body that seem weakest and least important are actually the most necessary.",howto:"Look for roles in Buddies Ministry serving kids and families with special needs."},
-  "Youth":{icon:"💥",desc:"God has given you a supernatural connection with teenagers. You remember what it felt like to be young, searching, and unsure — and you want to be the voice of truth and grace that points them to Jesus.",scripture:"1 Timothy 4:12 — Don't let anyone think less of you because you are young. Be an example to all believers.",howto:"Look for roles in Youth Ministry."}
+  "Discernment":{icon:"👁",desc:"You have a Spirit-given ability to distinguish truth from error and sense what is spiritually happening beneath the surface. You protect the body of Christ and help people stay grounded in truth.",scripture:"1 John 4:1 — Test the spirits to see whether they are from God.",howto:"Look for roles in prayer, leadership support, and spiritual protection.",everyday:"At work, trust your instincts when something feels off and speak up wisely. At home, guard the spiritual atmosphere and be intentional about what your family consumes. In everyday life, pray before making big decisions and help others test what they are hearing."},
+  "Exhortation":{icon:"💬",desc:"You have a gift for coming alongside people and calling out the best in them. Whether it's a word of encouragement, a challenge, or a practical next step — people walk away from conversations with you feeling stronger.",scripture:"Romans 12:8 — If your gift is to encourage others, be encouraging.",howto:"Look for roles where you interact with and pour into people directly.",everyday:"At work, be the teammate who hypes people up and reminds them of their potential. At home, speak life over your family daily — your words carry weight. In everyday life, send that encouraging text, make that call, and never let a good thought about someone go unsaid."},
+  "Wisdom":{icon:"🌿",desc:"God gives you the ability to apply biblical truth to real-life situations in ways that bring clarity and direction. People seek you out because your perspective cuts through confusion and points to what actually matters.",scripture:"James 1:5 — If you need wisdom, ask our generous God, and he will give it to you.",howto:"Look for roles in leadership, counseling, and decision-making.",everyday:"At work, be a voice of reason in stressful or complex situations. At home, seek God before making major family decisions and share what you sense. In everyday life, be the friend people call when they need real perspective — not just an echo."},
+  "Intercession":{icon:"🙏",desc:"You feel a deep, sustained call to pray for people, situations, and the church. Prayer isn't a discipline you have to force — it's something you are genuinely drawn to, and you believe God moves when you intercede.",scripture:"1 Timothy 2:1 — Pray for all people. Ask God to help them; intercede on their behalf.",howto:"Look for roles in prayer ministry and spiritual covering for the church.",everyday:"At work, pray over your workspace, your colleagues, and the atmosphere before you start each day. At home, establish a culture of prayer in your household. In everyday life, when someone shares a need — stop and pray with them right then and there."},
+  "Creative Arts":{icon:"🎨",desc:"God has wired you to express His truth and beauty through creative expression — music, design, writing, video, photography, or storytelling. Your creativity is not just talent; it's a spiritual gift that moves people toward God.",scripture:"Exodus 31:3 — I have filled him with the Spirit of God, giving him great wisdom and expertise in all kinds of crafts.",howto:"Look for roles in worship, media, social content, and creative environments.",everyday:"At work, bring creativity into your projects and presentations. At home, use your gifts to create a beautiful, intentional environment. In everyday life, use your art to tell God's story — a photo, a song, a caption, or a design can change someone's day."},
+  "Technical":{icon:"🎛",desc:"You have a God-given ability and passion for using technology and technical systems to advance the mission. Whether it's sound, lighting, video, or digital tools — you help the message land with excellence.",scripture:"Exodus 31:3 — I have filled him with the Spirit of God, giving him great wisdom and expertise in all kinds of crafts.",howto:"Look for roles in production, media, and technical support.",everyday:"At work, be the person who solves tech problems and improves systems. At home, use your skills to make life run more efficiently for your family. In everyday life, volunteer your technical skills for community events, nonprofits, and people who need help."},
+  "Languages":{icon:"🌐",desc:"You have a heart and gift for crossing cultural and language barriers so that everyone can experience the Gospel. You help the church truly reflect the diversity of God's Kingdom.",scripture:"Acts 2:6 — Everyone came running and they were amazed to hear their own languages being spoken by the believers.",howto:"Look for roles in translation, multicultural outreach, and community bridge-building.",everyday:"At work, advocate for inclusion and bridge cultural gaps on your team. At home, expose your family to diverse cultures and perspectives. In everyday life, be a connector between communities that would not otherwise interact."},
+  "Children":{icon:"⭐",desc:"God has given you a special love and ability to nurture the spiritual growth of children. You have the patience, creativity, and heart to help kids encounter Jesus at a young age — and those seeds last a lifetime.",scripture:"Matthew 19:14 — Jesus said, Let the children come to me. The Kingdom of Heaven belongs to those who are like these children.",howto:"Look for roles in Kids Ministry and Buddies.",everyday:"At work, mentor younger team members or interns. At home, be intentional about building faith foundations with the children in your life. In everyday life, show up for the kids in your neighborhood and family — they are watching everything you do."},
+  "Special Needs":{icon:"♥",desc:"You have a rare and beautiful gift — a specific calling to love, serve, and advocate for people with disabilities and special needs. You see their dignity, their value, and their place in the body of Christ.",scripture:"1 Corinthians 12:22 — Some parts of the body that seem weakest and least important are actually the most necessary.",howto:"Look for roles in Buddies Ministry serving kids and families with special needs.",everyday:"At work, advocate for accessibility and inclusion for colleagues with different abilities. At home, teach your family to see and honor the dignity in every person. In everyday life, be a voice for those who are overlooked and an advocate for those who need one."},
+  "Youth":{icon:"💥",desc:"God has given you a supernatural connection with teenagers. You remember what it felt like to be young, searching, and unsure — and you want to be the voice of truth and grace that points them to Jesus.",scripture:"1 Timothy 4:12 — Don't let anyone think less of you because you are young. Be an example to all believers.",howto:"Look for roles in Youth Ministry.",everyday:"At work, mentor young professionals and be the kind of leader you wish you had. At home, stay connected to the teenagers in your family — keep the lines of communication open. In everyday life, be consistent and authentic — teens can spot a fake from a mile away."},
+  "Dance":{icon:"🕊",desc:"God has wired you to worship through movement. Dance is not just performance for you — it is an act of praise. You use your body as an instrument to glorify God and lead others into His presence.",scripture:"Psalm 149:3 — Let them praise his name with dancing and make music to him with timbrel and harp.",howto:"Look for a role on the Moves team.",everyday:"At work, bring expressive energy into collaborative and creative spaces. At home, use movement as a way to worship and decompress. In everyday life, do not be afraid to let your joy be visible — your freedom in worship gives others permission to express themselves too."},
+  "Outreach":{icon:"🤝",desc:"You feel a deep calling to serve people outside the church walls. Whether it is volunteering, community service, or acts of practical love — you want the world to experience the kindness of God through your hands.",scripture:"Matthew 25:35 — I was hungry and you gave me food, I was a stranger and you welcomed me.",howto:"Look for a role on the Cares team.",everyday:"At work, look for ways to give back through company volunteer days or community initiatives. At home, get your family involved in serving others — make generosity a lifestyle. In everyday life, carry gift cards, water bottles, or snacks to give to people in need when you encounter them."},
+  "Virtual":{icon:"💻",desc:"You have a heart for people who experience church online. You understand that the virtual congregation is just as real and just as important — and you are gifted at making people feel connected, seen, and cared for through a screen.",scripture:"Acts 2:17 — I will pour out my Spirit on all people — everywhere, in every generation.",howto:"Look for a role on the Virtual Experience team.",everyday:"At work, bring the same warmth and intentionality to video calls and digital communication that others bring in person. At home, stay connected with long-distance family and friends with purpose. In everyday life, use your online platforms to encourage, point people to faith, and build genuine community."}
 };
 
 function renderGiftDetails(sortedGifts){
@@ -434,7 +445,7 @@ function renderGiftDetails(sortedGifts){
     card.innerHTML='<div class="gift-detail-name"><span class="gift-detail-icon">'+def.icon+'</span>'+g+'</div>'
       +'<div class="gift-detail-desc">'+def.desc+'</div>'
       +'<div class="gift-detail-scripture">'+def.scripture+'</div>'
-      +'<div class="gift-howto" style="font-size:12px;color:#534AB7;font-weight:600;margin-top:.6rem">→ '+def.howto+'</div>';
+      +'<div class="gift-howto" style="font-size:12px;color:#1a1a1a;font-weight:600;margin-top:.6rem">→ On the Dream Team: '+def.howto+(def.everyday?'<div style="font-size:12px;color:#444;line-height:1.6;margin-top:.6rem;padding:.6rem;background:#f9f9f7;border-radius:8px"><strong style="color:#111">In everyday life: </strong>'+def.everyday+'</div>':'');
     section.appendChild(card);
   });
   return section;
